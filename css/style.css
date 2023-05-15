@@ -17,6 +17,64 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.main-img {
+    width: 80%;
+}
+
+.items-container {
+    width: 20%;
+    position: relative;
+}
+
+#scroll-up, #scroll-down {
+    position: absolute;
+    background-color: rgba(186, 188, 190, 0.611);
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    line-height: 20px;
+}
+
+.items-container i {
+    width: 20px;
+    height: 20px;
+}
+
+#scroll-up {
+    top: 10px;
+}
+
+#scroll-down {
+    bottom: 10px;
+}
+
+.items-container .item {
+    width: 100%;
+    height: calc(100% / 5);
+}
+
+
+
+
+
+
+
+
+.debug .item {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.debug .main-img {
+    background-color: blue;
+}
+
+.debug .items-container {
+    background-color: blueviolet;
 }
 
 .debug .container .slider {
