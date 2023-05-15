@@ -67,5 +67,8 @@ for (let i = 0; i < imagesArray.length; i++) {
 
 const itemsContainer = document.querySelector('.items-container');
 
-itemsContainer.innerHTML = imgItemsContainer;
+itemsContainer.innerHTML += imgItemsContainer;
+
+let imgItem = document.querySelector('.img-item');
+imgItem.className = 'img-item active';
 
