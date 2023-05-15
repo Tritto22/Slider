@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .container {
     height: 100vh;
     background-color: lightgray;
@@ -22,7 +28,16 @@
 
 .main-img {
     width: 80%;
+}
+
+.main-img .img-item {
+    height: 100%;
     position: relative;
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 .main-img .description {
@@ -47,7 +62,7 @@
 }
 
 .items-container i {
-    width: 20px;
+    width: 25px;
     height: 20px;
 }
 
@@ -69,12 +84,12 @@
 
 
 
-.debug h1, .debug p {
+/* .debug h1, .debug p {
     border: 1px solid black;
     background-color: yellow;
     height: 20px;
     width: 100px;
-}
+} */
 
 .debug .item {
     background-color: green;
