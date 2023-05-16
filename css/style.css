@@ -37,11 +37,14 @@ img {
 .main-img .img-item {
     height: 100%;
     position: relative;
+}
+
+.disable {
     display: none;
 }
 
 .active {
-    display: block !important;
+    display: block;
 }
 
 .main-img .description {
@@ -55,6 +58,14 @@ img {
     position: relative;
 }
 
+.opacity {
+    opacity: 0.5;
+}
+
+.no-opacity {
+    opacity: 1;
+}
+
 #scroll-up, #scroll-down {
     position: absolute;
     background-color: rgba(186, 188, 190, 0.611);
@@ -63,6 +74,7 @@ img {
     transform: translate(-50%, 0);
     text-align: center;
     line-height: 20px;
+    z-index: 2;
 }
 
 .items-container i {
@@ -95,7 +107,7 @@ img {
     width: 100px;
 } */
 
-.debug .item {
+/* .debug .item {
     background-color: green;
     border: 1px solid black;
 }
@@ -110,4 +122,4 @@ img {
 
 .debug .container .slider {
     background-color: red;
-}
+} */

@@ -41,7 +41,7 @@ let imgItems = '';
 
 for (let i = 0; i < imagesArray.length; i ++ ) {
     imgItems += `
-    <div class="img-item">
+    <div class="img-item disable">
         <img src="${imagesArray[i]}" alt="${itemsTitle[i]}">
 
         <div class="description">
@@ -50,17 +50,18 @@ for (let i = 0; i < imagesArray.length; i ++ ) {
     </div>`;
 };
 
-console.log(imgItems);
-
 const mainImg = document.querySelector('.main-img');
 
 mainImg.innerHTML = imgItems;
+
+let imgItem = document.querySelector('.img-item');
+imgItem.className = 'img-item active';
 
 let imgItemsContainer = '';
 
 for (let i = 0; i < imagesArray.length; i++) {
     imgItemsContainer += `
-    <div class="item">
+    <div class="item opacity">
         <img src="${imagesArray[i]}" alt="${itemsTitle[i]}">
     </div>`;
 };
@@ -69,6 +70,25 @@ const itemsContainer = document.querySelector('.items-container');
 
 itemsContainer.innerHTML += imgItemsContainer;
 
-let imgItem = document.querySelector('.img-item');
-imgItem.className = 'img-item active';
+// let up = document.getElementById('scroll-up');
+
+// let item = document.querySelector('.item');
+
+// item.className = 'item no-opacity';
+
+
+
+// let noOpacityItem = 0;
+
+
+
+// up.addEventListener('click', function(){
+//     noOpacityItem -= 1;
+// });
+
+// let down = document.getElementById('scroll-down');
+
+// down.addEventListener('click', function () {
+//     noOpacityItem += 1;
+// });
 
