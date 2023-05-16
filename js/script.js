@@ -8,23 +8,23 @@ const imagesArray = [
 
 const description = [
     `                    
-        <h1>Germania</h1>
+        <h2>Germania</h2>
         <p>La Germania è un Paese dell'Europa Occidentale con oltre due millenni di storia e un paesaggio caratterizzato da foreste, fiumi, catene montuose e spiagge affacciate sul Mare del Nord.</p>
     `,
     `                    
-        <h1>Grecia</h1>
+        <h2>Grecia</h2>
         <p>La Grecia è famosa in tutto il mondo per la bellezza delle sue isole e delle sue spiagge. Organizza con noi la tua prossima vacanza nelle isole greche!</p>
     `,
     `                    
-        <h1>Holland</h1>
+        <h2>Holland</h2>
         <p>I Paesi Bassi, situati nel nord-ovest dell'Europa, sono conosciuti soprattutto per il paesaggio piatto ricco di canali, campi di tulipani, mulini a vento e piste ciclabili.</p>
     `,
     `                    
-        <h1>Italy</h1>
+        <h2>Italy</h2>
         <p>L'Italia, Paese europeo con una lunga costa sul Mediterraneo, ha lasciato un'impronta profonda sulla cultura e sulla cucina occidentali.</p>
     `,
     `                    
-        <h1>Spain</h1>
+        <h2>Spain</h2>
         <p>La Spagna, paese della penisola iberica, comprende 17 comunità autonome con diverse culture e caratteristiche geografiche.</p>
     `,
 ];
@@ -76,25 +76,31 @@ let down = document.getElementById('scroll-down');
 
 let opacityItem = document.getElementsByClassName('item');
 
+let activeImgItem = document.getElementsByClassName('img-item');
+
 let item = 0;
 
-opacityItem[item].className = 'item no-opacity';
+opacityItem[item].className = 'item no-opacity border';
 
 up.addEventListener('click', function(){
     opacityItem[item].className = 'item opacity';
+    activeImgItem[item].className = 'img-item disable'
 
     item --;
     console.log(item);
     if (item < 0) {
         item = opacityItem.length - 1;
     };
-    opacityItem[item].className = 'item no-opacity';
+
+    opacityItem[item].className = 'item no-opacity border';
+    activeImgItem[item].className = 'img-item active'
 
 });
 
 
 down.addEventListener('click', function () {
     opacityItem[item].className = 'item opacity';
+    activeImgItem[item].className = 'img-item disable'
 
     item ++;
     console.log(item);
@@ -102,7 +108,8 @@ down.addEventListener('click', function () {
         item = 0;
     }
 
-    opacityItem[item].className = 'item no-opacity';
+    opacityItem[item].className = 'item no-opacity border';
+    activeImgItem[item].className = 'img-item active'
 
 });
 
