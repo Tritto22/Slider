@@ -87,7 +87,6 @@ up.addEventListener('click', function(){
     activeImgItem[item].className = 'img-item disable'
 
     item --;
-    console.log(item);
     if (item < 0) {
         item = opacityItem.length - 1;
     };
@@ -103,7 +102,6 @@ down.addEventListener('click', function () {
     activeImgItem[item].className = 'img-item disable'
 
     item ++;
-    console.log(item);
     if (item >= opacityItem.length) {
         item = 0;
     }

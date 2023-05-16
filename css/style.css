@@ -22,7 +22,7 @@ img {
 
 .slider {
     width: 50vw;
-    height: 70%;
+    height: 50vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -105,32 +105,3 @@ img {
     width: 100%;
     height: calc(100% / 5);
 }
-
-
-
-
-
-
-/* .debug h1, .debug p {
-    border: 1px solid black;
-    background-color: yellow;
-    height: 20px;
-    width: 100px;
-} */
-
-/* .debug .item {
-    background-color: green;
-    border: 1px solid black;
-}
-
-.debug .main-img {
-    background-color: blue;
-}
-
-.debug .items-container {
-    background-color: blueviolet;
-}
-
-.debug .container .slider {
-    background-color: red;
-} */
