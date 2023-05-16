@@ -70,25 +70,43 @@ const itemsContainer = document.querySelector('.items-container');
 
 itemsContainer.innerHTML += imgItemsContainer;
 
-// let up = document.getElementById('scroll-up');
+let up = document.getElementById('scroll-up');
 
-// let item = document.querySelector('.item');
+let down = document.getElementById('scroll-down');
 
-// item.className = 'item no-opacity';
+let opacityItem = document.getElementsByClassName('item');
+
+let item = 0;
+
+opacityItem[item].className = 'item no-opacity';
+
+up.addEventListener('click', function(){
+    opacityItem[item].className = 'item opacity';
+
+    item --;
+    console.log(item);
+    if (item < 0) {
+        item = opacityItem.length - 1;
+    };
+    opacityItem[item].className = 'item no-opacity';
+
+});
+
+
+down.addEventListener('click', function () {
+    opacityItem[item].className = 'item opacity';
+
+    item ++;
+    console.log(item);
+    if (item >= opacityItem.length) {
+        item = 0;
+    }
+
+    opacityItem[item].className = 'item no-opacity';
+
+});
 
 
 
-// let noOpacityItem = 0;
 
-
-
-// up.addEventListener('click', function(){
-//     noOpacityItem -= 1;
-// });
-
-// let down = document.getElementById('scroll-down');
-
-// down.addEventListener('click', function () {
-//     noOpacityItem += 1;
-// });
 
