@@ -70,9 +70,9 @@ const itemsContainer = document.querySelector('.items-container');
 
 itemsContainer.innerHTML += imgItemsContainer;
 
-let up = document.getElementById('scroll-up');
+let left = document.getElementById('scroll-left');
 
-let down = document.getElementById('scroll-down');
+let right = document.getElementById('scroll-right');
 
 let opacityItem = document.getElementsByClassName('item');
 
@@ -82,7 +82,7 @@ let item = 0;
 
 opacityItem[item].className = 'item no-opacity border';
 
-up.addEventListener('click', function(){
+left.addEventListener('click', function(){
     opacityItem[item].className = 'item opacity';
     activeImgItem[item].className = 'img-item disable'
 
@@ -97,7 +97,7 @@ up.addEventListener('click', function(){
 });
 
 
-down.addEventListener('click', function () {
+right.addEventListener('click', function () {
     opacityItem[item].className = 'item opacity';
     activeImgItem[item].className = 'img-item disable'
 
