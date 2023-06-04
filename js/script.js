@@ -91,7 +91,7 @@ left.addEventListener('click', function(){
         item = opacityItem.length - 1;
     };
 
-    opacityItem[item].className = 'item no-opacity border';
+    opacityItem[item].className = 'item no-opacity';
     activeImgItem[item].className = 'img-item active'
 
 });
@@ -106,7 +106,7 @@ right.addEventListener('click', function () {
         item = 0;
     }
 
-    opacityItem[item].className = 'item no-opacity border';
+    opacityItem[item].className = 'item no-opacity';
     activeImgItem[item].className = 'img-item active'
 
 });
