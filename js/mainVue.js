@@ -30,6 +30,7 @@ const app = new Vue({
 
         ],
         position: 0,
+        autoplayID: null
     },
     methods: {
         left: function(){
@@ -50,14 +51,11 @@ const app = new Vue({
             this.position = index;
         },
         autoplay: function(){
-            setInterval(this.right,3000)
+            this.autoplayID = setInterval(this.right,3000)
         },
         stopAutoplay: function(){
-            clearInterval(this.autoplay)
+            clearInterval(this.autoplayID)
         },
-        hello: function(){
-            console.log('hello');
-        }
     },
     mounted () {
         this.autoplay()

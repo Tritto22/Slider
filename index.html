@@ -11,7 +11,7 @@
 <body>
     <div id="root">
         <div class="container">
-            <div class="slider" @mouseover="stopAutoplay()">
+            <div class="slider" @mouseover="stopAutoplay()" @mouseleave="autoplay()">
                 <div class="main-img">
                     <div class="img-item">
                         <img :src="imagesArray[position].path">
